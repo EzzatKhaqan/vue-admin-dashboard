@@ -5,3 +5,4 @@ export { default as InputText } from "./input/InputText.vue";
 export { default as IconFeild } from "./input/IconFeild.vue";
 export { default as InputIcon } from "./input/InputIcon.vue";
 export { default as FloatLabel } from "./input/FloatLabel.vue";
+export { default as Textarea } from "./input/Textarea.vue";

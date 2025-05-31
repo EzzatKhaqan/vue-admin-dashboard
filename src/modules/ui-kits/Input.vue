@@ -1,5 +1,5 @@
 <script setup>
-import { InputText, IconFeild, InputIcon, FloatLabel } from "../../components/index";
+import { InputText, IconFeild, InputIcon, FloatLabel, Textarea } from "../../components/index";
 </script>
 <template>
 
@@ -41,6 +41,12 @@ import { InputText, IconFeild, InputIcon, FloatLabel } from "../../components/in
                         <label for="username">Username</label>
                         <InputText id="username" class="w-full"></InputText>
                     </FloatLabel>
+                </div>
+            </div>
+            <div class="card flex flex-col gap-5">
+                <div class="text-xl">Textarea</div>
+                <div class="flex flex-col gap-5">
+                    <Textarea placeholder="Message" cols="3" rows="3" class="w-full"></Textarea>
                 </div>
             </div>
         </div>

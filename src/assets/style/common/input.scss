@@ -35,6 +35,9 @@ $e-input-invalid-text-color: #c70a0a;
   &.e-input-text-fluid {
     width: 100%;
   }
+  &:hover {
+    border-color: var(--e-input-hover-color);
+  }
 }
 // IconFeild
 .e-icon-feild {
@@ -91,5 +94,28 @@ $e-input-invalid-text-color: #c70a0a;
     font-size: calc(var(--e-floatlabel-size) - var(--e-floatlabel-size) / 5);
     top: 0;
     z-index: 100;
+  }
+}
+
+// Textarea
+
+.e-textarea {
+  outline: none;
+  border: 1px solid var(--e-border-color);
+  border-radius: 5px;
+  font-size: 14px;
+  color: $e-input-text-color;
+  background-color: var(--e-textarea-background);
+  padding-inline: var(--e-textarea-padding-x);
+  padding-block: var(--e-textarea-padding-y);
+  transition: all 0.2s ease;
+  appearance: none;
+  letter-spacing: 0.6px;
+
+  &:enabled:focus {
+    border: 1px solid var(--e-primary-green);
+  }
+  &:hover {
+    border-color: var(--e-input-hover-color);
   }
 }
