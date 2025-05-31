@@ -35,7 +35,7 @@ $e-input-invalid-text-color: #c70a0a;
   &.e-input-text-fluid {
     width: 100%;
   }
-  &:hover {
+  &:hover:not(:focus) {
     border-color: var(--e-input-hover-color);
   }
 }
