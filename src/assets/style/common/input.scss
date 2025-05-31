@@ -88,12 +88,17 @@ $e-input-invalid-text-color: #c70a0a;
     inset-inline-start: var(--e-floatlabel-position-x);
     color: var(--e-floatlabel-color);
   }
-  &:has(input:focus) label {
+  &:has(input:focus) label,
+  &:has(input:not(:placeholder-shown)) label {
     background-color: white;
     color: var(--e-primary-green);
     font-size: calc(var(--e-floatlabel-size) - var(--e-floatlabel-size) / 5);
     top: 0;
     z-index: 100;
+  }
+
+  &:has(input:not(:placeholder-shown):not(:focus)) label {
+    color: var(--e-floatlabel-color);
   }
 }
 

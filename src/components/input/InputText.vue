@@ -2,7 +2,10 @@
 
 const props = defineProps({
 
-    placeholder: String,
+    placeholder: {
+        type: String,
+        default: " "
+    },
     disabled: {
         type: Boolean,
         default: false
@@ -11,14 +14,16 @@ const props = defineProps({
         type: Boolean,
         default: false
     },
-    id: String
+    id: String,
+    required: false
 });
 
 </script>
 <template>
 
     <input :id="id" type="text" :placeholder="placeholder" class="e-input-text"
-        :class="[{ 'e-input-text-disabeld': disabled, 'invalid-input': invalid }]" :disabled="disabled">
+        :class="[{ 'e-input-text-disabeld': disabled, 'invalid-input': invalid }]" :disabled="disabled"
+        :required="required">
 
 </template>
 
