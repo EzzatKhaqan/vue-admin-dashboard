@@ -1,0 +1,26 @@
+.footer {
+  width: calc(100% - 260px);
+  position: absolute;
+  right: 0;
+  height: 50px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--e-border-color);
+  transition: all 0.2s ease-in-out;
+  h3 {
+    color: var(--e-dark-navy);
+    font-weight: 200;
+    transition: color 0.3s ease;
+    span {
+      color: var(--e-primary-green);
+      transition: color 0.3s ease;
+    }
+  }
+}
+.sidebar-expanded {
+  .footer {
+    width: calc(100% - 60px);
+  }
+}

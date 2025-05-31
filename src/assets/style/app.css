@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+* {
+  scrollbar-width: thin;
+  font-family: "Lato", sans-serif;
+}
+body {
+  background: var(--e-surface-ground);
+}

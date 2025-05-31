@@ -1,0 +1,208 @@
+@use "sass:color";
+
+$e-button-primary: #1bdd83;
+$e-button-secondary: #f1f5f9;
+$e-button-success: #22c55e;
+$e-button-info: #0ea5e9;
+$e-button-warning: #f97316;
+$e-button-help: #7701f5;
+$e-button-danger: #ec0a0a;
+$e-button-contrast: #000;
+
+@mixin disabled-style($rounded: false) {
+  pointer-events: none;
+  opacity: 0.8;
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: if($rounded, 20px, 5px);
+  }
+}
+
+@mixin button-style(
+  $text_color,
+  $text_outlined_color,
+  $bg_color,
+  $bg_hover_color,
+  $bg_outlined_hover_color
+) {
+  background: $bg_color;
+  color: $text_color;
+  border: 1px solid;
+  &.outlined {
+    border: 1px solid $text_outlined_color;
+    color: $text_outlined_color;
+    &:hover {
+      background: $bg_outlined_hover_color;
+    }
+  }
+  &:hover {
+    background: $bg_hover_color;
+  }
+}
+
+@function get-darken-color($color) {
+  @return color.adjust($color, $lightness: -13%);
+}
+@function get-lighter-color($color) {
+  @return color.adjust($color, $lightness: 40%);
+}
+
+.e-button {
+  padding: 8px;
+  border: 1px solid var(--e-border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+  user-select: none;
+  position: relative;
+  display: flex;
+  outline: none;
+  overflow: hidden;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &:hover {
+    background: var(--e-soft-gray);
+  }
+
+  &.rounded {
+    border-radius: 20px;
+  }
+
+  &.disabled {
+    @include disabled-style(false);
+  }
+
+  &.disabled.rounded {
+    @include disabled-style(true);
+  }
+  &.e-button-icon-only {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.rounded {
+      border-radius: 50%;
+    }
+  }
+
+  &.e-button-link {
+    div {
+      &:active {
+        color: var(--e-link-active);
+      }
+      &:hover {
+        // color: var(--e-link-hover);
+        text-decoration: underline;
+      }
+      &:visited {
+        color: var(--e-link-visited);
+      }
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &.primary,
+  &.secondary,
+  &.success,
+  &.warn,
+  &.help,
+  &.info,
+  &.danger,
+  &.contrast {
+    &.outlined {
+      background-color: var(--e-white);
+    }
+  }
+
+  &.primary {
+    @include button-style(
+      var(--e-white),
+      $e-button-primary,
+      $e-button-primary,
+      get-darken-color($e-button-primary),
+      get-lighter-color($e-button-primary)
+    );
+  }
+
+  &.secondary {
+    @include button-style(
+      var(--e-black),
+      var(--e-black),
+      $e-button-secondary,
+      get-darken-color($e-button-secondary),
+      get-lighter-color($e-button-secondary)
+    );
+  }
+
+  &.success {
+    @include button-style(
+      var(--e-white),
+      $e-button-success,
+      $e-button-success,
+      get-darken-color($e-button-success),
+      get-lighter-color($e-button-success)
+    );
+  }
+
+  &.info {
+    @include button-style(
+      var(--e-white),
+      $e-button-info,
+      $e-button-info,
+      get-darken-color($e-button-info),
+      get-lighter-color($e-button-info)
+    );
+  }
+
+  &.warn {
+    @include button-style(
+      var(--e-white),
+      $e-button-warning,
+      $e-button-warning,
+      get-darken-color($e-button-warning),
+      get-lighter-color($e-button-warning)
+    );
+  }
+
+  &.help {
+    @include button-style(
+      var(--e-white),
+      $e-button-help,
+      $e-button-help,
+      get-darken-color($e-button-help),
+      get-lighter-color($e-button-help)
+    );
+  }
+
+  &.danger {
+    @include button-style(
+      var(--e-white),
+      $e-button-danger,
+      $e-button-danger,
+      get-darken-color($e-button-danger),
+      get-lighter-color($e-button-danger)
+    );
+  }
+
+  &.contrast {
+    @include button-style(
+      var(--e-white),
+      $e-button-contrast,
+      $e-button-contrast,
+      get-darken-color($e-button-contrast),
+      get-lighter-color($e-button-contrast)
+    );
+  }
+}
