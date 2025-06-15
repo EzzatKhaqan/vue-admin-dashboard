@@ -11,7 +11,6 @@ defineProps({
     <textarea :placeholder="placeholder" :id="id" class="e-textarea" style="overflow: hidden;" :rows="rows"
         :cols="cols"></textarea>
 
-
 </template>
 
 

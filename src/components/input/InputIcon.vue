@@ -4,7 +4,5 @@ defineProps({
 });
 </script>
 <template>
-
     <span class="e-input-icon" :class="icon"></span>
-
 </template>

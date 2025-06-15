@@ -25,7 +25,7 @@ const isLink = props.role.toLowerCase() == 'link';
 <template>
     <router-link v-if="isLink" :to="props.to">
         <button class="e-button" :type="props.role"
-            :class="[type, { 'disabled': props.disabled || loading, 'outlined': outlined, 'rounded': rounded, 'e-button-icon-only': !label, }, 'e-button-link']">
+            :class="[type, { 'disabled': props.disabled || loading, 'outlined': outlined, 'rounded': rounded, 'e-button-icon-only': !label }, 'e-button-link']">
             <div :dir="props.direction">
                 <span class="e-app-button-text" v-if="label">{{ props.label }}</span>
                 <i v-if="loading" class="pi pi-spin pi-spinner"></i>

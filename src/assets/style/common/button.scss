@@ -85,6 +85,7 @@ $e-button-contrast: #000;
   &.disabled.rounded {
     @include disabled-style(true);
   }
+
   &.e-button-icon-only {
     width: 35px;
     height: 35px;
@@ -113,6 +114,7 @@ $e-button-contrast: #000;
       text-decoration: underline;
     }
   }
+
   &.primary,
   &.secondary,
   &.success,
