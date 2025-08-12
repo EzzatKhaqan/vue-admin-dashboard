@@ -14,12 +14,12 @@ const classContainer = computed(() => {
 <template>
 
     <div class="wrapper" :class="classContainer">
-        <Header />
+        <Header></Header>
         <Sidebar />
         <div class="page-wrapper ">
             <router-view />
         </div>
-        <Footer />
+        <Footer></Footer>
     </div>
 
 </template>

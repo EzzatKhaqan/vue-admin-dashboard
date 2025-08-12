@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { timetableRoutes } from "@/modules/Timetable/routes";
+
+import AdminRoutes from "./AdminRoutes";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -7,17 +8,10 @@ const router = createRouter({
     {
       path: "/",
       component: () => import("../views/pages/Landing.vue"),
-      children: [
-        ...timetableRoutes,
-        {
-          path: "button",
-          component: () => import("../modules/ui-kits/Button.vue"),
-        },
-        {
-          path: "Inputs",
-          component: () => import("../modules/ui-kits/Input.vue"),
-        },
-      ],
+    },
+    {
+      path: "/admin",
+      children: [...AdminRoutes],
     },
   ],
 });

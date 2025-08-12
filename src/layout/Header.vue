@@ -3,7 +3,9 @@
     <div class="header">
         <div class="header-logo-container">
             <div class="header-logo">
-                <img src="../assets/images/IMG_5567.jpg" alt="Photo">
+                <a href="/">
+                    <img src="../assets/images/IMG_5567.jpg" alt="Photo">
+                </a>
             </div>
             <div class="header-title">
                 <span>EzZat</span> Vue

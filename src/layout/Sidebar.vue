@@ -12,7 +12,7 @@ const model = ref([
             {
                 label: 'Home',
                 icon: 'pi pi-home',
-                to: '/',
+                to: '/admin',
             },
         ],
     },
