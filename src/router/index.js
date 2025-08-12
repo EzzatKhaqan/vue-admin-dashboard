@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: () => import("../layout/AppLayout.vue"),
+      component: () => import("../views/pages/Landing.vue"),
       children: [
         ...timetableRoutes,
         {
