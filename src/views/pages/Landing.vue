@@ -9,7 +9,6 @@ import AppButton from '@/components/button/AppButton.vue';
                 <h1 class="brand">Ezzat Vue Admin Dashboard</h1>
                 <nav>
                     <a href="#features">Features</a>
-                    <a href="#about">About</a>
                 </nav>
             </div>
         </header>

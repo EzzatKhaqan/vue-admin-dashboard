@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue';
+import { ref } from 'vue';
 import { Menu } from '../components/index.js';
 import { useLayout } from './composables/layout.js';
 
@@ -121,7 +121,7 @@ const model = ref([
 
     <div class="sidebar">
         <div class="sidebar-toggle-btn" @click="toggleSidebar">
-            <i class="pi pi-angle-double-left"></i>
+            <i class="pi pi-angle-double-right"></i>
         </div>
         <div class="sidebar-content">
             <Menu :model="model" />

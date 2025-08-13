@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.7",
+    "@tanstack/vue-table": "^8.21.3",
     "postcss": "^8.5.3",
     "primeicons": "^7.0.0",
     "tailwindcss": "^4.1.7",
